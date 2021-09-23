@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Css
+Bundle-SymbolicName: task.eclipse.css;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: xyz
+Automatic-Module-Name: eclipse.css
+Require-Bundle: org.eclipse.e4.ui.css.swt.theme,
+ org.eclipse.e4.ui.css.core,
+ org.eclipse.e4.ui.css.swt,
+ org.eclipse.swt;visibility:=reexport,
+ swt.widgets
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

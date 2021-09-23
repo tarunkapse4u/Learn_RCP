@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application"
+	xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands"
+	xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment"
+	xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu"
+	xmi:id="_AG8wAPsAEeqkSvBVXszopA">
+	<fragments xsi:type="fragment:StringModelFragment"
+		xmi:id="_bWXusPsAEeqkSvBVXszopA" featurename="commands"
+		parentElementId="xpath:/">
+		<elements xsi:type="commands:Command"
+			xmi:id="_dfYCkPsAEeqkSvBVXszopA"
+			elementId="tasks.ui.command.testcommandj" commandName="OpenTaskFile">
+			<persistedState key="persistState" value="false" />
+		</elements>
+	</fragments>
+	<fragments xsi:type="fragment:StringModelFragment"
+		xmi:id="_k0YZ4PsDEeqkSvBVXszopA" featurename="handlers"
+		parentElementId="xpath:/">
+		<elements xsi:type="commands:Handler"
+			xmi:id="_nQoZ4PsDEeqkSvBVXszopA" elementId="tasks.ui.handler.jjj"
+			contributionURI="bundleclass://tasks.ui/tasks.ui.handlers.TestHandler"
+			command="_dfYCkPsAEeqkSvBVXszopA">
+			<persistedState key="persistState" value="false" />
+		</elements>
+	</fragments>
+	<fragments xsi:type="fragment:StringModelFragment"
+		xmi:id="_lVJSsPsFEeqkSvBVXszopA" featurename="trimContributions"
+		parentElementId="xpath:/">
+		<elements xsi:type="menu:TrimContribution"
+			xmi:id="_oL6rgPsFEeqkSvBVXszopA"
+			elementId="tasks.ui.trimcontribution.0"
+			parentId="org.eclipse.ui.main.toolbar">
+			<persistedState key="persistState" value="false" />
+			<children xsi:type="menu:ToolBar"
+				xmi:id="_K1MzsPsGEeqkSvBVXszopA" elementId="tasks.ui.toolbar.0">
+				<children xsi:type="menu:HandledToolItem"
+					xmi:id="_MBNT0PsGEeqkSvBVXszopA"
+					elementId="tasks.ui.handledtoolitem.5" label="" iconURI=""
+					command="_dfYCkPsAEeqkSvBVXszopA" />
+			</children>
+		</elements>
+	</fragments>
+	<fragments xsi:type="fragment:StringModelFragment"
+		xmi:id="_6gHEcP5OEeqbWfUf7NxPCg" featurename="addons"
+		parentElementId="xpath:/">
+		<elements xsi:type="application:Addon"
+			xmi:id="_7gXAgP5OEeqbWfUf7NxPCg" elementId="tasks.ui.addon.0"
+			contributionURI="bundleclass://tasks.ui/tasks.ui.addon.PerspectiveSwitchAddon">
+			<persistedState key="persistState" value="false" />
+		</elements>
+	</fragments>
+</fragment:ModelFragments>
