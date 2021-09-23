@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Model
+Bundle-SymbolicName: tasks.model
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: xyz
+Automatic-Module-Name: tasks.model
+Export-Package: tasks.model,
+ tasks.model
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

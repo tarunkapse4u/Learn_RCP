@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Widgets
+Bundle-SymbolicName: swt.widgets
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: xyz
+Automatic-Module-Name: swt.widgets
+Require-Bundle: org.eclipse.jface,
+ org.eclipse.core.runtime
+Export-Package: swt.widgets
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

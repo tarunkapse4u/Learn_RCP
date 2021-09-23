@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_IVWxcPl3Eeqqw-Y722VVrg">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_IyVoYPl3Eeqqw-Y722VVrg" featurename="descriptors" parentElementId="xpath:/">
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_Re36sPl3Eeqqw-Y722VVrg" elementId="tasks.ui.partdescriptor.overview" label="Overview" category="Task Management" closeable="true" contributionURI="bundleclass://tasks.ui/tasks.ui.parts.TodoOverviewPart">
+      <tags>View</tags>
+      <handlers xmi:id="_JV3YEPzsEeqwRJXpuUN7UQ" elementId="tasks.ui.handler.0" contributionURI="bundleclass://tasks.ui/tasks.ui.handlers.ActiveWhenHandlerForPart"/>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_5k9zcPswEeqkSvBVXszopA" elementId="tasks.ui.popupmenu.table" label="Table">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_9PHJ8PswEeqkSvBVXszopA" elementId="tasks.ui.handledmenuitem.delete" label="Delete"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_MU5uQP2rEeqgPJ3IUrdemw" elementId="tasks.ui.directmenuitem.openedit" label="Open edit" contributionURI="bundleclass://tasks.ui/tasks.ui.handlers.OpenEditorHandler"/>
+      </menus>
+    </elements>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_eed9oPl3Eeqqw-Y722VVrg" elementId="tasks.ui.partdescriptor.details" label="Details" category="Task Management" closeable="true" contributionURI="bundleclass://tasks.ui/tasks.ui.parts.TodoDetailsPart">
+      <tags>View</tags>
+    </elements>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_hGkoUPl3Eeqqw-Y722VVrg" elementId="tasks.ui.partdescriptor.playground" label="Playground" category="Task Management" closeable="true" contributionURI="bundleclass://tasks.ui/tasks.ui.parts.PlaygroundPart">
+      <tags>View</tags>
+    </elements>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_F0_s4Pw9Eeqln8kdy7q2pg" elementId="tasks.ui.partdescriptor.combo" label="Autocompletion Part" closeable="true" contributionURI="bundleclass://tasks.ui/tasks.ui.parts.AutoCompleteFieldPart"/>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_WPZogP2rEeqgPJ3IUrdemw" elementId="tasks.ui.partdescriptor.editor" label="Task editor" category="Task Management" closeable="true" contributionURI="bundleclass://tasks.ui/tasks.ui.parts.TaskEditorPart">
+      <tags>Editor</tags>
+      <tags>removeOnHide</tags>
+    </elements>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_25WtwCQtEeuBcN9moNuCRQ" elementId="tasks.ui.partdescriptor.playground3" label="Playground Sync" category="Task Management" closeable="true" contributionURI="bundleclass://tasks.ui/tasks.ui.parts.PlaygroundPart2">
+      <tags>View</tags>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

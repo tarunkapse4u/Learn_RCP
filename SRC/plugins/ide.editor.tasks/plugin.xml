@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            file-extensions="tasks"
+            id="ide.contenttype.tasks"
+            name="Tasks"
+            priority="high">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editorContentTypeBinding
+            contentTypeId="ide.contenttype.tasks"
+            editorId="org.eclipse.ui.genericeditor.GenericEditor">
+      </editorContentTypeBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.presentationReconcilers">
+      <presentationReconciler
+            class="ide.editor.tasks.PropertiesReconciler"
+            contentType="ide.contenttype.tasks">
+      </presentationReconciler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.themes">
+      <colorDefinition
+            categoryId="ide.editor.tasks.settings"
+            id="ide.editor.tasks.key"
+            label="Task key color"
+            value="255,0,0">
+      </colorDefinition>
+      <themeElementCategory
+            id="ide.editor.tasks.settings"
+            label="Tasks settings">
+      </themeElementCategory>
+      <colorDefinition
+            categoryId="ide.editor.tasks.settings"
+            id="ide.editor.tasks.key2"
+            label="Task Description Color"
+            value="0,255,0">
+      </colorDefinition>
+   </extension>
+   <extension
+      point="org.eclipse.ui.genericeditor.contentAssistProcessors">
+   <contentAssistProcessor
+         class="ide.editor.tasks.TodoPropertiesContentAssistProcessor"
+         contentType="ide.contenttype.tasks">
+   </contentAssistProcessor>
+   <contentAssistProcessor
+         class="ide.editor.tasks.DependentTodoContentAssistProcessor"
+         contentType="ide.contenttype.tasks">
+   </contentAssistProcessor>
+     <contentAssistProcessor
+         class="ide.editor.tasks.TodoPropertiesContentAssistProcessorOsgiService"
+         contentType="ide.contenttype.tasks">
+   </contentAssistProcessor>
+	</extension>
+	<extension
+       point="org.eclipse.core.filebuffers.documentSetup">
+    <participant
+          class="ide.editor.tasks.TodoMarkerDocumentSetupExample"
+          contentTypeId="ide.contenttype.tasks">
+    </participant>
+ </extension>
+ 
+ <extension
+       point="org.eclipse.ui.genericeditor.hoverProviders">
+    <hoverProvider
+          class="ide.editor.tasks.TasksTextHover"
+          contentType="ide.contenttype.tasks">
+    </hoverProvider>
+ </extension>
+ <extension
+       point="org.eclipse.ui.genericeditor.reconcilers">
+    <reconciler
+          class="org.eclipse.jface.text.codemining.CodeMiningReconciler"
+          contentType="ide.contenttype.tasks">
+    </reconciler>
+ </extension>
+ 
+ <extension
+       point="org.eclipse.ui.workbench.texteditor.codeMiningProviders">
+    <codeMiningProvider
+          class="ide.editor.tasks.TaskCodeMiningProvider"
+          id="ide.editor.tasks.codeMiningProvider"
+          label="Show additional task info">
+       <enabledWhen>
+          <with
+               variable="editorInput">
+                <adapt type="org.eclipse.core.resources.IFile">
+                   <test property="org.eclipse.core.resources.contentTypeId" value="ide.contenttype.tasks" />
+				</adapt>
+          </with></enabledWhen>
+    </codeMiningProvider>
+ </extension>
+ <extension
+       point="org.eclipse.core.contenttype.contentTypes">
+    <content-type
+          file-extensions="lars"
+          id="ide.editor.tasks.content-type1"
+          name="Lars"
+          priority="normal">
+    </content-type>
+ </extension>
+ <extension
+       point="org.eclipse.ui.editors">
+    <editorContentTypeBinding
+          contentTypeId="ide.editor.tasks.content-type1"
+          editorId="org.eclipse.ui.genericeditor.GenericEditor">
+    </editorContentTypeBinding>
+ </extension>
+ <extension
+       point="org.eclipse.ui.workbench.texteditor.hyperlinkDetectors">
+    <hyperlinkDetector
+          activate="true"
+          class="ide.editor.tasks.hyperlink.DependentTodoHyperlinkDetector"
+          id="ide.editor.tasks.hyperlinkDetector"
+          name="Hyperlink to other tasks files"
+          targetId="org.eclipse.ui.genericeditor.GenericEditor">
+    </hyperlinkDetector>
+ </extension>
+
+</plugin>
